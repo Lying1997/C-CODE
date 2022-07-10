@@ -79,6 +79,11 @@ int que(char a[], int k, int s)
 	return -1;
 }
 
+void Add(int* p)
+{
+	(*p)++;
+}
+
 int main()
 {
 	//¿âº¯Êı
@@ -121,6 +126,9 @@ int main()
 	}
 	
 
+	int num = 0;
+	Add(&num);
+	printf("%d", num);
 
 	return 0;
 }
