@@ -1,0 +1,5 @@
+﻿  contact.c
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(20,8): warning C4477: “scanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 1 拥有了类型“int”
+  test.c
+  正在生成代码...
+  contact.vcxproj -> D:\2022code\C-CODE\7.26\contact\x64\Debug\contact.exe

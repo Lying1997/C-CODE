@@ -1,0 +1,11 @@
+﻿  contact.c
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(104,35): warning C4047: “函数”:“const char *”与“char **”的间接级别不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(104,31): warning C4024: “strcmp”: 形参和实参 2 的类型不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(124,23): warning C4047: “函数”:“char **”与“char [20]”的间接级别不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(124,19): warning C4024: “find”: 形参和实参 2 的类型不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(153,19): warning C4090: “函数”: 不同的“const”限定符
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(153,25): warning C4047: “函数”:“char **”与“char [20]”的间接级别不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(153,21): warning C4024: “find”: 形参和实参 2 的类型不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(179,25): warning C4047: “函数”:“char **”与“char [20]”的间接级别不同
+D:\2022code\C-CODE\7.26\contact\contact\contact.c(179,21): warning C4024: “find”: 形参和实参 2 的类型不同
+  contact.vcxproj -> D:\2022code\C-CODE\7.26\contact\Debug\contact.exe
