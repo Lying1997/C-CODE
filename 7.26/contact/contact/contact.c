@@ -1,4 +1,4 @@
-
+#define _CRT_SECURE_NO_WARNINGS
 #include "contact.h"
 
 //void InitContact(contact* pc)
@@ -18,6 +18,29 @@ void InitContact(contact* pc)
 	pc->data = ptr;
 	pc->sz = 0;
 	pc->capacity = DEFAULT_SZ;
+
+	LOADContact(pc);
+}
+
+void LOADContact(contact* pc)                                 //读文件
+{
+	FILE* pf = fopen("contact.dat", "r");
+	if (pf==NULL)
+	{
+		perror("fopen");
+		return;
+	}
+
+	PeoInfo tmp = { 0 };
+	while (fread(&tmp, sizeof(PeoInfo), 1, pf))
+	{
+		CHECKCapacity(pc);
+		pc->data[pc->sz] = tmp;
+		pc->sz++;
+	}
+
+	fclose(pf);
+	pf = NULL;
 }
 
 //void ADDContact(contact* pc)                                  //增加
@@ -42,11 +65,11 @@ void InitContact(contact* pc)
 //	printf("保存成功\n");
 //}
 
-void ADDContact(contact* pc)                                  //增加
+void CHECKCapacity(contact* pc)                            //检查容量
 {
 	if (pc->sz == pc->capacity)
 	{
-		PeoInfo* ptr = (PeoInfo*)realloc(pc->data,(DEFAULT_SZ + INC_SZ) * sizeof(PeoInfo));
+		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (DEFAULT_SZ + INC_SZ) * sizeof(PeoInfo));
 		if (ptr == NULL)
 		{
 			perror("ADDContact");
@@ -54,12 +77,17 @@ void ADDContact(contact* pc)                                  //增加
 		}
 		else
 		{
-            pc->data = ptr;
+			pc->data = ptr;
 			pc->capacity += INC_SZ;
-            printf("增容成功\n");
+			printf("增容成功\n");
 		}
 	}
+}
 
+void ADDContact(contact* pc)                                  //增加
+{
+	CHECKCapacity(pc);
+	
 	printf("请输入名字:\n");
 	scanf("%s", pc->data[pc->sz].name);             //这些是数组，数组名就是地址，不需要取地址
 	printf("请输入年龄:\n");
@@ -81,6 +109,27 @@ void EXITContact(contact* pc)
 	pc->data = NULL;
 	pc->sz = 0;
 	pc->capacity = 0;
+}
+
+
+void SAVEContact(contact* pc)
+{
+	FILE* pf = fopen("contact.dat", "w");
+	if (pf==NULL)
+	{
+		perror(fopen);
+		return;
+	}
+
+	int i = 0;
+	for ( i = 0; i < pc->sz; i++)
+	{
+		fwrite(pc->data+i, sizeof(PeoInfo), 1, pf);
+	}
+
+	fclose(pf);
+	pf = NULL;
+
 }
 
 

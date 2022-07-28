@@ -51,3 +51,9 @@ void MODIFYContact(contact* pc);
 void SORTContact(contact* pc);
 
 void EXITContact(contact* pc);
+
+void SAVEContact(contact* pc);
+
+void LOADContact(contact* pc);
+
+void CHECKCapacity(contact* pc);

@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include"contact.h"
 
 
@@ -40,6 +41,7 @@ int main()
 		switch (input)
 		{
 		case ADD:
+
 			ADDContact(&con);
 			break;
 		case DEL:
@@ -58,6 +60,7 @@ int main()
 			PRINTContact(&con);
 			break;
 		case EXIT:
+			SAVEContact(&con);
 			EXITContact(&con);
 			break;
 		default:
