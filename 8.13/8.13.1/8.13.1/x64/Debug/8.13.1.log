@@ -1,0 +1,7 @@
+﻿  8.13.1.cpp
+D:\2022code\C-CODE\8.13\8.13.1\8.13.1\8.13.1.cpp(66,7): warning C4834: 放弃具有 "nodiscard" 属性的函数的返回值
+D:\2022code\C-CODE\8.13\8.13.1\8.13.1\8.13.1.cpp(67,6): warning C4834: 放弃具有 "nodiscard" 属性的函数的返回值
+D:\2022code\C-CODE\8.13\8.13.1\8.13.1\8.13.1.cpp(68,10): warning C4834: 放弃具有 "nodiscard" 属性的函数的返回值
+D:\2022code\C-CODE\8.13\8.13.1\8.13.1\8.13.1.cpp(69,9): warning C4834: 放弃具有 "nodiscard" 属性的函数的返回值
+D:\2022code\C-CODE\8.13\8.13.1\8.13.1\8.13.1.cpp(90,9): warning C4834: 放弃具有 "nodiscard" 属性的函数的返回值
+  8.13.1.vcxproj -> D:\2022code\C-CODE\8.13\8.13.1\x64\Debug\8.13.1.exe
